@@ -11,7 +11,7 @@ require 'statsd'
 
 @options = {:server => 'statsd', :port => 2033, :env => 'production', :name => 'graphite.prefix'}
 OptionParser.new do |opts|
-    opts.banner = 'Usage: postfix_queue-gmetric.rb [options]'
+    opts.banner = 'Usage: resque_queues.rb [options]'
 
     opts.on('-r', '--redis RESQUE_SERVER:PORT:DB', 'Redis server and port database for resque') { |v| @options[:redis_server] = v }
     opts.on('-s', '--server SENDCHANNEL_HOST', 'Statsd host') { |v| @options[:server] = v }
