@@ -1,5 +1,5 @@
-FROM ruby:2.1-onbuild
-COPY entrypoint.sh /entrypoint.sh
+FROM ruby:2.2-onbuild
 
-ENTRYPOINT [ "/entrypoint.sh" ]
+ENTRYPOINT [ "/usr/src/app/entrypoint.sh" ]
 CMD [ "-r", "redis", "-e", "production" ] 
+USER daemon
