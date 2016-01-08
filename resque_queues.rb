@@ -31,5 +31,5 @@ stats = Resque.info
 $statsd = Statsd.new @options[:server], @options[:port]
 
 Resque.queues.each do |q|
-    $statsd.count("#{@options[:env]}.#{@options[:name]}.#{q}", Resque.size(q))
+    $statsd.gauge("#{@options[:env]}.#{@options[:name]}.#{q}", Resque.size(q))
 end
