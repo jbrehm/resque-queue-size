@@ -6,6 +6,5 @@ Usage: resque_queues.rb [options]
         --redis
     -s, --server SENDCHANNEL_HOST    Statsd host
     -p, --port SENDCHANNEL_PORT      Statsd port
-    -e, --environment ENV            Environment
-    -n, --name STATS_PREFIX          Prefix for statsd
+    -e, --prefix PREFIX            Statsd Prefix
 ```
